@@ -8,7 +8,7 @@ class Item(Resource):
     parser = reqparse.RequestParser()
     parser.add_argument('price', type=float, required=True, help="This field cannot be left blank!")
 
-    @jwt_required()
+    # @jwt_required()
     def get(self, name):
         item = self.find_by_name(name)
         if item:
@@ -68,7 +68,7 @@ class Item(Resource):
 
         return {'message': 'Item deleted'}
 
-    @jwt_required()
+    # @jwt_required()
     def put(self, name):
         data = Item.parser.parse_args()
         item = self.find_by_name(name)

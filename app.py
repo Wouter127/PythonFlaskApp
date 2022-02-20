@@ -1,3 +1,4 @@
+# dit is de code van section3
 from flask import Flask, jsonify, request, render_template
 
 app = Flask(__name__)
